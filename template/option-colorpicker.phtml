@@ -1,0 +1,19 @@
+<div class="setting-option">	
+	<h4 class="setting-title"><?php echo $title ?> :</h4>	
+	<div class="setting-colorpicker">
+		<div class="pickcolor">
+			<div style="background-color: #<?php echo $value; ?>;"></div>
+		</div>
+		<input type="text" class="pickcolor-text" name="<?php echo $id; ?>" id="<?php echo $id; ?>" value="<?php echo $value; ?>" />
+	</div>
+	<span class="meta-description"><?php echo $description; ?></span>
+	
+	<?php if(isset($help)) : ?>
+	<div class="moreinfo" title="More Info">&nbsp;</div>
+	<div class="help">
+		<div class="help-wrapper">
+			<?php echo $help; ?>
+		</div>
+	</div>
+	<?php endif; ?>
+</div>

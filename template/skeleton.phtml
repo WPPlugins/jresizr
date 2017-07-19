@@ -1,0 +1,38 @@
+<?php if(isset($savemsg)) : ?>
+<div class="alert alert-info savedinfo">
+	<strong>Setting Saved</strong> 	 
+</div>
+<?php endif; ?>
+<form id="jeg-setting-form" method="post">	
+	<?php echo $wpnonce; ?>	
+	<div class="jad">
+		<div class="jad-header">
+			<div class="jad-header-title"><?php echo $pluginname . ' v' . $version; ?></div>
+			
+			<?php if( isset($_COOKIE['jadclose']) && $_COOKIE['jadclose'] == 1 ) : ?>
+			<!-- Ads Closed -->
+			<?php else :  ?>
+			<div class="jad-ads">
+				<a target="_blank" href="http://bit.ly/RGaux8">
+					<img src="http://farm9.staticflickr.com/8331/8131510367_909108b06a_z.jpg"/>
+				</a>
+				<div class="jad-ads-close">[x] Close</div>
+			</div>		
+			<?php endif; ?>
+			
+		</div>
+		<div class="jad-body">
+			
+			<!-- Body Content -->
+			<?php echo $bodycontent; ?>
+						
+			<div class="jad-body-clear"></div>
+		</div>
+		<div class="jad-foot">
+			<div class="jad-submit">
+				<input type="hidden" value="true" name="submit"/>
+				<input class="btn" type="submit" value="Save Setting">
+			</div>
+		</div>
+	</div>
+</form>
